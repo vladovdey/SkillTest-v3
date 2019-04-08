@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
+    cursor: default;
+}
+
+.container{
+    width: 960px;
+    margin: 0px auto;
+    padding-left: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+header{
+    background-image: url("../img/header_bc.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 825px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo{
+    padding-top: 10px;
+    
+}
+header .menu{
+    padding-top: 25px;
+}
+
+.menu a{
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff;
+    margin-left: 50px;
+    padding-right: 5px
+}
+
+/*Sticky*/
+.sticky{
+    background-color: #fff;
+    padding: 22px 15px 22px  0px
+}
+
+.sticky .menu a{
+    color: #414f6b; 
+    border-bottom: 1px solid #414f6b;
+}
+
+.sticky .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.is-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+	  z-index: 15;
+    margin-top: 0;
+    width: 100%;
+}
+/*Sticky*/
+
+/*about history*/
+.about-history{
+    background-image: url("../img/historybc.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 905px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.about-history .container{
+    align-self: flex-start;
+}
+
+.about-history .history-logo{
+    padding-top: 70px;
+    padding-bottom: 10px;
+}
+
+.about-history .text{
+    padding-left: 75px;
+}
+
+.about-history .text p{
+margin: 0;
+}
+
+.slider{
+    padding-top: 25px;
+    align-self: flex-end;
+    width: 100%;
+    background-color: rgba(65, 79, 107, 0.5);
+    height: 200px;
+}
+
+.slider .image{
+    display: inline-block;
+}
+
+.slider .image img{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*about history*/
+
+.about-climb{
+    background-color: #fff;
+}
+
+.about-climb .container{
+    display: flex;
+}
+
+.climb-logo{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+.about-climb .text{
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+/*For mount selector*/
+.mountain_menu{
+    background-color: #414f6b;
+}
+
+.mountain_menu span{
+    text-decoration:none;
+    color: #b0b4be;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .select_mountain{
+    font-family: 'Oswald', sans-serif;
+    display:inline-block;
+    padding: 10px 20px;
+  }
+  
+  .selected{
+    background-color: #b0b4be;
+  }
+  
+  .selected span{
+    color:#414f6b;
+    border-bottom: 2px solid #414f6b;
+  }
+/*end*/
+
+/*For schedule*/
+  .mountain-schedule{
+      background-image: url("../img/mountain_selectbc.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom center;
+      height: 550px;
+  }
+
+  .mountain-schedule .container{
+      padding-top: 100px;
+      padding-left: 30px;
+  }
+
+  .schedule h1{
+    font-family: 'Oswald',sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #414f6b;
+    margin-top: 0;
+  }
+
+  .schedule{
+    padding: 20px 40px;
+    background-color: rgb(255,255,255, 0.7);
+    height: auto;
+    width: 315px;
+  }
+
+  .schedule_elem{
+    display: inline-block;
+  }
+
+  .schedule_elem p{
+      font-family: 'Lato';
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 5px;
+  }
+
+  .date{
+      margin-right: 50px;
+      
+  }
+
+  #schedule_mount2{
+      display: none;
+      position: relative;
+      z-index: 1;
+  }
+
+  #schedule_mount1{
+      z-index: 99;
+      position: absolute; 
+}
+/*end*/
+
+/*Footer*/
+footer{
+    background-color: #414f6b;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 15px 25px;
+}
+
+.copyright p{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 16px;
+    color: #5b6c91;
+}
+
+/*Footer end*/
