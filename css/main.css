@@ -7,9 +7,8 @@ body{
 }
 
 .container{
-    width: 960px;
     margin: 0px auto;
-    padding-left: 20px;
+    padding: 0px 20px;
 }
 
 a{
@@ -94,9 +93,36 @@ header .menu{
     align-self: flex-start;
 }
 
-.about-history .history-logo{
+.categorie-logo{
     padding-top: 70px;
     padding-bottom: 10px;
+    display: flex;
+    
+}
+
+.categorie-logo p{
+    font-family: 'Oswald', sans-serif;  
+    margin: 0;
+}
+
+.categorie-logo_number p{
+  font-size: 135px;
+  position: relative;
+  color: #6c7c97;
+  margin: 0;
+}
+
+.categorie-logo_text p{
+    font-size: 35px;
+    text-transform: uppercase;
+    color:#414f6b;
+    margin: 0;
+}
+
+.categorie-logo_text{
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 132px;
 }
 
 .about-history .text{
@@ -133,10 +159,13 @@ margin: 0;
     display: flex;
 }
 
-.climb-logo{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
+.about-climb .categorie-logo{
+    padding: 0px;
+    margin-right: 50px;
+}
+
+.about-climb .categorie-logo_text p{
+    margin-left: 18px;
 }
 
 .about-climb .text{
@@ -175,15 +204,24 @@ margin: 0;
 /*end*/
 
 /*For schedule*/
-  .mountain-schedule{
-      background-image: url("../img/mountain_selectbc.jpg");
+
+  .mountain-schedule0{
+      background-image: url("../img/mountain_selectbc0.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: cover;
       background-position: bottom center;
       height: 550px;
   }
 
-  .mountain-schedule .container{
+  .mountain-schedule1{
+    background-image: url("../img/mountain_selectbc1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 550px;
+  }
+
+  .mountain-schedule0 .container{
       padding-top: 100px;
       padding-left: 30px;
   }
