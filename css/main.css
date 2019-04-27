@@ -1,291 +1,516 @@
-body{
+@font-face {
+    font-family: "Bebasr";
+    src: url("/fonts/BebasRegular/BebasRegular.eot");
+    src: url("../fonts/BebasRegular/BebasRegular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Light'), local('Lato-Light'), url('../fonts/LatoLight/latolight.woff2') format('woff2'), 
+    url('../fonts/LatoLight/latolight.woff') format('woff'), 
+    url('../fonts/LatoLight/latolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/LatoRegular/latoregular.woff2') format('woff2'), 
+    url('../fonts/LatoRegular/latoregular.woff') format('woff'), 
+    url('../fonts/LatoRegular/latoregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/LatoBold/latobold.woff2') format('woff2'), 
+    url('../fonts/LatoBold/latobold.woff') format('woff'), 
+    url('../fonts/LatoBold/latobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Black'), local('Lato-Black'), url('../fonts/LatoBlack/latoblack.woff2') format('woff2'), 
+    url('../fonts/LatoBlack/latoblack.woff') format('woff'), 
+    url('../fonts/LatoBlack/latoblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('../fonts/LatoBlackItalic/latobolditalic.woff2') format('woff2'), 
+    url('../fonts/LatoBlackItalic/latoblackitalic.woff') format('woff'), 
+    url('../fonts/LatoBlackItalic/latoblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: local('Oswald Bold'), local('Oswald-Bold'), url('../fonts/OswaldBold/Oswaldbold.woff2') format('woff2'), 
+    url('../fonts/OswaldBold/Oswaldbold.woff') format('woff'), 
+    url('../fonts/OswaldBold/Oswaldbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
     font-family: 'Lato', sans-serif;
     cursor: default;
+    counter-reset: a;
 }
 
-.container{
+nav a:before {
+    counter-increment: a;
+    content: "0"counter(a) ". ";
+}
+
+
+.logo img {
+    height: 40px;
+    width: 40px;
+}
+
+.logotext p {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 23.5px;
+    font-family: "Bebasr";
+    font-weight: 600;
+    color: #414f6b;
+    padding-left: 9px;
+}
+
+
+#up {
+    height: 17px;
+    font-size: 21.5px;
+    color: #4d4d4d;
+}
+
+.item {
+    background-color: #ffffff;
+    height: 100px;
+
+}
+
+.container {
     margin: 0px auto;
-    padding: 0px 20px;
+    padding: 0px 0px 0px 20px;
+    max-width: 960px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-p{
-    font-family: 'Lato',sans-serif;
+p {
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #000000;
 }
 
-header{
-    background-image: url("../img/header_bc.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 825px;
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
 }
 
-header .container{
+.header .logotext {
+    display: none;
+}
+
+.scrolled {
+    background-color: #fff;
+}
+
+.scrolled .logotext {
+    display: block;
+}
+
+.scrolled .dir a {
+    color: #414f6b;
+    border-color: #414f6b;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
 }
 
-header .logo{
-    padding-top: 10px;
-    
-}
-header .menu{
-    padding-top: 25px;
+header .logo {
+    padding: 15px 0px;
 }
 
-.menu a{
+header .menu {
+    padding: 20px 0px;
+}
+
+.menu a {
     font-family: 'Lato';
     text-transform: uppercase;
     font-style: italic;
-    font-size: 14px;
+    font-size: 12px;
     border-bottom: 1px solid #ffffff;
     margin-left: 50px;
     padding-right: 5px
 }
 
-/*Sticky*/
-.sticky{
-    background-color: #fff;
-    padding: 22px 15px 22px  0px
+.mainscreen {
+    background-image: url("../img/header_bc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 825px;
 }
 
-.sticky .menu a{
-    color: #414f6b; 
+/*Sticky*/
+.sticky {
+    background-color: #fff;
+    padding: 22px 15px 22px 0px
+}
+
+.sticky .menu a {
+    color: #414f6b;
     border-bottom: 1px solid #414f6b;
 }
 
-.sticky .container{
+.sticky .container {
     display: flex;
     justify-content: space-between;
 }
 
-.is-fixed{
+.logo {
+    display: flex;
+}
+
+.is-fixed {
     position: fixed;
     top: 0;
     left: 0;
-	  z-index: 15;
+    z-index: 15;
     margin-top: 0;
     width: 100%;
 }
+
 /*Sticky*/
 
 /*about history*/
-.about-history{
+.about-history {
     background-image: url("../img/historybc.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 905px;
     display: flex;
     flex-flow: row wrap;
 }
 
-.about-history .container{
+.about-history .container {
     align-self: flex-start;
+    padding: 0 8px;
 }
 
-.categorie-logo{
+.about-history .slider .container {
+    padding: 0 25px;
+}
+
+.categorie-logo {
     padding-top: 70px;
-    padding-bottom: 10px;
     display: flex;
-    
 }
 
-.categorie-logo p{
-    font-family: 'Oswald', sans-serif;  
+.categorie-logo p {
+    font-family: 'Oswald', sans-serif;
     margin: 0;
 }
 
-.categorie-logo_number p{
-  font-size: 135px;
-  position: relative;
-  color: #6c7c97;
-  margin: 0;
+.categorie-logo_number {
+    height: 165px;
 }
 
-.categorie-logo_text p{
-    font-size: 35px;
+.categorie-logo_number p {
+    font-size: 135px;
+    position: relative;
+    color: #6c7c97;
+    margin: 0;
+}
+
+.categorie-logo_text p {
+    font-size: 32px;
     text-transform: uppercase;
-    color:#414f6b;
+    color: #414f6b;
     margin: 0;
 }
 
-.categorie-logo_text{
+.categorie-logo_text {
     position: absolute;
-    margin-top: 90px;
-    margin-left: 132px;
+    margin-top: 85px;
+    margin-left: 148px;
 }
 
-.about-history .text{
-    padding-left: 75px;
+.about-history .text {
+    text-align: left;
+    font-size: 22px;
+    padding: 0 55px;
 }
 
-.about-history .text p{
-margin: 0;
+.about-history .text p {
+    margin: 0;
 }
 
-.slider{
+.slider {
     padding-top: 25px;
     align-self: flex-end;
     width: 100%;
     background-color: rgba(65, 79, 107, 0.5);
-    height: 200px;
 }
 
-.slider .image{
+.slider .image {
     display: inline-block;
 }
 
-.slider .image img{
+.slider .image img {
     padding-left: 5px;
     padding-right: 5px;
 }
-/*about history*/
 
-.about-climb{
-    background-color: #fff;
+.owl-dot {
+    text-align: center;
+    border: 1px solid black;
 }
 
-.about-climb .container{
+/*about history*/
+
+.about-climb {
+    background-color: #fff;
+    padding-bottom: 25px;
+}
+
+.about-climb .container {
     display: flex;
 }
 
-.about-climb .categorie-logo{
+.about-climb .categorie-logo {
     padding: 0px;
-    margin-right: 50px;
+    margin-right: 90px;
 }
 
-.about-climb .categorie-logo_text p{
-    margin-left: 18px;
+.about-climb .categorie-logo_number p {
+    color: #b0b4be;
 }
 
-.about-climb .text{
-    padding-top: 70px;
-    padding-left: 30px;
-    padding-right: 15px;
+.about-climb .text {
+    padding-top: 75px;
+    padding-right: 50px;
+}
+
+.about-climb .text p {
+    margin: 0;
 }
 
 /*For mount selector*/
-.mountain_menu{
+.mountain_menu {
     background-color: #414f6b;
 }
 
-.mountain_menu span{
-    text-decoration:none;
+.mountain_menu span {
+    text-decoration: none;
     color: #b0b4be;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .select_mountain{
+    font-size: 20px;
+}
+
+.select_mountain {
     font-family: 'Oswald', sans-serif;
-    display:inline-block;
+    display: inline-block;
     padding: 10px 20px;
-  }
-  
-  .selected{
+}
+
+.selected {
     background-color: #b0b4be;
-  }
-  
-  .selected span{
-    color:#414f6b;
+}
+
+.selected span {
+    color: #414f6b;
     border-bottom: 2px solid #414f6b;
-  }
+}
+
 /*end*/
 
 /*For schedule*/
 
-  .mountain-schedule0{
-      background-image: url("../img/mountain_selectbc0.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom center;
-      height: 550px;
-  }
+.mountain-schedule0 {
+    background-image: url("../img/mountain_selectbc0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 550px;
+}
 
-  .mountain-schedule1{
+.mountain-schedule1 {
     background-image: url("../img/mountain_selectbc1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     height: 550px;
-  }
+}
 
-  .mountain-schedule0 .container{
-      padding-top: 100px;
-      padding-left: 30px;
-  }
+.mountain-schedule0 .container {
+    padding-top: 100px;
+    padding-left: 30px;
+}
 
-  .schedule h1{
-    font-family: 'Oswald',sans-serif;
+.schedule h1 {
+    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     color: #414f6b;
     margin-top: 0;
-  }
-
-  .schedule{
-    padding: 20px 40px;
-    background-color: rgb(255,255,255, 0.7);
-    height: auto;
-    width: 315px;
-  }
-
-  .schedule_elem{
-    display: inline-block;
-  }
-
-  .schedule_elem p{
-      font-family: 'Lato';
-      font-weight: 300;
-      margin-top: 0;
-      margin-bottom: 5px;
-  }
-
-  .date{
-      margin-right: 50px;
-      
-  }
-
-  #schedule_mount2{
-      display: none;
-      position: relative;
-      z-index: 1;
-  }
-
-  #schedule_mount1{
-      z-index: 99;
-      position: absolute; 
+    margin-bottom: 20px;
+    font-size: 32px;
 }
+
+.schedule {
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255, 0.7);
+    height: auto;
+    width: fit-content;
+}
+
+.schedule_elem {
+    display: inline-block;
+}
+
+.schedule_elem p {
+    font-family: 'Lato';
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.date {
+    margin-right: 50px;
+
+}
+
+#schedule_mount2 {
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+#schedule_mount1 {
+    z-index: 99;
+    position: absolute;
+}
+
 /*end*/
 
 /*Footer*/
-footer{
+footer {
     background-color: #414f6b;
 }
 
-footer .container{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0px 15px 25px;
+footer .logotext p,
+#up {
+    color: #63769d;
 }
 
-.copyright p{
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.copyright p {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 16px;
+    font-size: 12px;
     color: #5b6c91;
 }
 
 /*Footer end*/
+
+@media screen and (max-width: 600px) {
+    .categorie-logo {
+        padding-top: 20px;
+        display: flex;
+    }
+
+    .about-history .text {
+        text-align: center;
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .about-climb .container {
+        display: block;
+    }
+
+    .about-climb .categorie-logo {
+        padding: 0px;
+        width: fit-content;
+    }
+
+    .about-climb .text {
+        padding-top: 20px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .schedule {
+        padding: 10px 20px 20px;
+    }
+
+    .mountain-schedule0 .container {
+        padding-top: 60px;
+        padding-left: 20px;
+    }
+
+    .schedule h1 {
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+
+    .date {
+        margin-right: 25px;
+    }
+
+    .logotext {
+        display: none;
+    }
+
+    .scrolled .logotext {
+        display: none;
+    }
+}
+
+.popup {
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 1;
+    text-align: center;
+    z-index: 999;
+    padding: 20% 0;
+    
+}
+
+.popup img {
+    margin: 10% auto;
+    width: 550px;
+    border-radius: 5px;
+}

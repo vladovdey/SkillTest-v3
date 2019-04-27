@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900i|Oswald:700" rel="stylesheet">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./libs/OwlCarousel2/dist/assets/owl.carousel.min.css">
     <title>LosAngelesMountain</title>
 </head>
 
@@ -16,33 +14,25 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="./img/mount-logo.png" alt="">
+                <img src="./img/mount-logo.png" alt="Mountain logo">
+                <div class="logotext">
+                    <p id="up">LosAngeles</p>
+                    <p id="down">Mountains</p>
+                </div>
             </div>
             <div class="menu">
-                <nav>
-                    <a href="#history">01. History</a>
-                    <a href="#climb">02. Team</a>
+                <nav class="dir">
+                    <a href="#history">History</a>
+                    <a href="#climb">Team</a>
                 </nav>
             </div>
         </div>
     </header>
     <!-- / header -->
 
-    <section class="sticky" id="history">
-        <div class="container">
-            <div class="logo">
-                <img src="./img/sticky-nav-logo.png" alt="">
-            </div>
+    <section class="mainscreen"></section>
 
-            <div class="menu">
-                <a href="#history">01. History</a>
-                <a href="#climb">02. Team</a>
-            </div>
-        </div>
-    </section>
-    <!-- /.sticky-nav -->
-
-    <section class="about-history">
+    <section class="about-history" id="history">
         <div class="container">
             <div class="categorie-logo">
                 <div class="categorie-logo_number">
@@ -57,28 +47,24 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum,
                     consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam.
                     Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique
-                    ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+                    ut quam. Vivamus suscipit dignissim tortor nec congue.
+                </p>
             </div>
         </div>
+
         <div class="slider">
             <div class="container">
-                <!-- <div class="fotorama" data-width="950" data-height="150">>
-                    <div class="image"><img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                        <img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                    </div>
-                    <div class="image"><img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                        <img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                    </div>
-                    <div class="image"><img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                        <img src="./img/slider-image-first.jpg" alt="">
-                        <img src="./img/slider-image-sec.jpg" alt="">
-                    </div>
-                </div> -->
+
+                <div class="owl-carousel owl-theme">
+                    <div class="popup_item"><img src="./img/slider-image-first.jpg" alt="SliderImage Climber"></div>
+                    <div class="popup_item"><img src="./img/slider-image-sec.jpg" alt="SliderImage Mountain"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-first.jpg" alt="SliderImage Climber"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-sec.jpg" alt="SliderImage Mountain"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-first.jpg" alt="SliderImage Climber"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-sec.jpg" alt="SliderImage Mountain"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-first.jpg" alt="SliderImage Climber"> </div>
+                    <div class="popup_item"><img src="./img/slider-image-sec.jpg" alt="SliderImage Mountain"> </div>
+                </div>
 
             </div>
         </div>
@@ -96,8 +82,8 @@
                 </div>
             </div>
             <div class="text">
-                    <p>Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique
-                        ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+                <p>Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique
+                    ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
             </div>
         </div>
     </section>
@@ -169,18 +155,22 @@
     <footer>
         <div class="container">
             <div class="logo">
-                <img src="./img/footer-logo.png" alt="">
+                <img src="./img/footer-logo.png" alt="Footer Logo">
+                <div class="logotext">
+                    <p id="up">LosAngeles</p>
+                    <p id="down">Mountains</p>
+                </div>
             </div>
 
             <div class="copyright">
-                <p>COPYRIGHT 2016. ALL RIGHTS RESERVE</p>
+                <p>COPYRIGHT 2016. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./libs/jquery/dist/jquery.min.js"></script>
+    <script src="./libs/OwlCarousel2/dist/owl.carousel.min.js"></script>
+    <script src="./js/script.min.js"></script>
 </body>
 
 </html>
